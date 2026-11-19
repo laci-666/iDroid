@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  INTENTIONAT GOL — REZERVA pentru Personal Team / cont gratuit.
+	  Implicit, proiectul semneaza cu DroidNative-Paid.entitlements
+	  (Increased Memory Limit + Extended Virtual Addressing); contul curent
+	  le permite. Fisierul acesta ramane pentru cazul in care un Personal
+	  Team refuza provisioning-ul cu capabilitatile de kernel: doar seteaza
+	  Build Settings -> Code Signing Entitlements inapoi aici.
+	  Aplicatia functioneaza identic, doar cu limita standard de memorie —
+	  Capabilitati afiseaza valoarea reala si RAM-ul guest se adapteaza singur.
+	-->
+</dict>
+</plist>

@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		000000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroidNativeApp.swift; sourceTree = "<group>"; };
+		000000000000000000000002 = {isa = PBXBuildFile; fileRef = 000000000000000000000001 /* DroidNativeApp.swift */; };
+		000000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		000000000000000000000004 = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* ContentView.swift */; };
+		000000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DroidNative-Bridging-Header.h; sourceTree = "<group>"; };
+		000000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DroidNative.entitlements; sourceTree = "<group>"; };
+		000000000000000000000039 = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DroidNative-Paid.entitlements"; sourceTree = "<group>"; };
+		000000000000000000000060 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000061 = {isa = PBXBuildFile; fileRef = 000000000000000000000060 /* Assets.xcassets */; };
+		000000000000000000000007 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapabilityProbe.swift; sourceTree = "<group>"; };
+		000000000000000000000008 = {isa = PBXBuildFile; fileRef = 000000000000000000000007 /* CapabilityProbe.swift */; };
+		000000000000000000000009 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JITCoordinator.swift; sourceTree = "<group>"; };
+		00000000000000000000000A = {isa = PBXBuildFile; fileRef = 000000000000000000000009 /* JITCoordinator.swift */; };
+		00000000000000000000000B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JIT26Bridge.m; sourceTree = "<group>"; };
+		00000000000000000000000C = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* JIT26Bridge.m */; };
+		00000000000000000000000D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JIT26Bridge.h; sourceTree = "<group>"; };
+		00000000000000000000000E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestDisplayView.swift; sourceTree = "<group>"; };
+		00000000000000000000000F = {isa = PBXBuildFile; fileRef = 00000000000000000000000E /* GuestDisplayView.swift */; };
+		000000000000000000000010 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchTranslator.swift; sourceTree = "<group>"; };
+		000000000000000000000011 = {isa = PBXBuildFile; fileRef = 000000000000000000000010 /* TouchTranslator.swift */; };
+		000000000000000000000012 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMConfiguration.swift; sourceTree = "<group>"; };
+		000000000000000000000013 = {isa = PBXBuildFile; fileRef = 000000000000000000000012 /* VMConfiguration.swift */; };
+		000000000000000000000014 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QEMUArgumentsBuilder.swift; sourceTree = "<group>"; };
+		000000000000000000000015 = {isa = PBXBuildFile; fileRef = 000000000000000000000014 /* QEMUArgumentsBuilder.swift */; };
+		000000000000000000000016 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMBackend.swift; sourceTree = "<group>"; };
+		000000000000000000000017 = {isa = PBXBuildFile; fileRef = 000000000000000000000016 /* VMBackend.swift */; };
+		00000000000000000000003A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QEMUBackend.swift; sourceTree = "<group>"; };
+		00000000000000000000003B = {isa = PBXBuildFile; fileRef = 00000000000000000000003A /* QEMUBackend.swift */; };
+		00000000000000000000003C = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QEMUBridge.c; sourceTree = "<group>"; };
+		00000000000000000000003D = {isa = PBXBuildFile; fileRef = 00000000000000000000003C /* QEMUBridge.c */; };
+		00000000000000000000003E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QEMUBridge.h; sourceTree = "<group>"; };
+		000000000000000000000062 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNNativeLinker.c; sourceTree = "<group>"; };
+		000000000000000000000063 = {isa = PBXBuildFile; fileRef = 000000000000000000000062 /* DNNativeLinker.c */; };
+		000000000000000000000064 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNNativeLinker.h; sourceTree = "<group>"; };
+		000000000000000000000065 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNNativeShims.c; sourceTree = "<group>"; };
+		000000000000000000000066 = {isa = PBXBuildFile; fileRef = 000000000000000000000065 /* DNNativeShims.c */; };
+		000000000000000000000067 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNNativeShims.h; sourceTree = "<group>"; };
+		000000000000000000000068 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNNativeRuntimeTest.swift; sourceTree = "<group>"; };
+		000000000000000000000069 = {isa = PBXBuildFile; fileRef = 000000000000000000000068 /* DNNativeRuntimeTest.swift */; };
+		00000000000000000000006B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNGpuVulkan.c; sourceTree = "<group>"; };
+		00000000000000000000006C = {isa = PBXBuildFile; fileRef = 00000000000000000000006B /* DNGpuVulkan.c */; };
+		00000000000000000000006D = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGpuVulkan.h; sourceTree = "<group>"; };
+		00000000000000000000006E = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNGpuVulkanBackend.h; sourceTree = "<group>"; };
+		00000000000000000000006F = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNGpuVulkanSoftwareBackend.c; sourceTree = "<group>"; };
+		000000000000000000000070 = {isa = PBXBuildFile; fileRef = 00000000000000000000006F /* DNGpuVulkanSoftwareBackend.c */; };
+		000000000000000000000071 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNGpuVulkanMetalBackend.swift; sourceTree = "<group>"; };
+		000000000000000000000072 = {isa = PBXBuildFile; fileRef = 000000000000000000000071 /* DNGpuVulkanMetalBackend.swift */; };
+		000000000000000000000073 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNNativePatch.c; sourceTree = "<group>"; };
+		000000000000000000000074 = {isa = PBXBuildFile; fileRef = 000000000000000000000073 /* DNNativePatch.c */; };
+		000000000000000000000075 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNNativePatch.h; sourceTree = "<group>"; };
+		000000000000000000000076 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNNativeBionic.c; sourceTree = "<group>"; };
+		000000000000000000000077 = {isa = PBXBuildFile; fileRef = 000000000000000000000076 /* DNNativeBionic.c */; };
+		000000000000000000000078 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNNativeBionic.h; sourceTree = "<group>"; };
+		000000000000000000000079 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DNNativeAndroid.c; sourceTree = "<group>"; };
+		00000000000000000000007A = {isa = PBXBuildFile; fileRef = 000000000000000000000079 /* DNNativeAndroid.c */; };
+		00000000000000000000007B = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNNativeAndroid.h; sourceTree = "<group>"; };
+		000000000000000000000018 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMController.swift; sourceTree = "<group>"; };
+		000000000000000000000019 = {isa = PBXBuildFile; fileRef = 000000000000000000000018 /* VMController.swift */; };
+		00000000000000000000001A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCatalog.swift; sourceTree = "<group>"; };
+		00000000000000000000001B = {isa = PBXBuildFile; fileRef = 00000000000000000000001A /* GuestCatalog.swift */; };
+		00000000000000000000001C = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		00000000000000000000001D = {isa = PBXBuildFile; fileRef = 00000000000000000000001C /* DownloadManager.swift */; };
+		00000000000000000000001E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipExtractor.swift; sourceTree = "<group>"; };
+		00000000000000000000001F = {isa = PBXBuildFile; fileRef = 00000000000000000000001E /* ZipExtractor.swift */; };
+		000000000000000000000020 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSetupManager.swift; sourceTree = "<group>"; };
+		000000000000000000000021 = {isa = PBXBuildFile; fileRef = 000000000000000000000020 /* GuestSetupManager.swift */; };
+		000000000000000000000022 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		000000000000000000000023 = {isa = PBXBuildFile; fileRef = 000000000000000000000022 /* SetupView.swift */; };
+		000000000000000000000024 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000025 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000007 /* CapabilityProbe.swift */,
+			);
+			path = Capabilities;
+			sourceTree = "<group>";
+		};
+		000000000000000000000026 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000009 /* JITCoordinator.swift */,
+				000000000000000000000040 /* DNBuiltInJITMessages.swift */,
+				000000000000000000000042 /* DNBuiltInJITHost.swift */,
+				000000000000000000000044 /* DNPairingFileStore.swift */,
+				000000000000000000000046 /* DNLocalDevVPNProbe.swift */,
+				00000000000000000000000B /* JIT26Bridge.m */,
+				00000000000000000000000D /* JIT26Bridge.h */,
+			);
+			path = JIT;
+			sourceTree = "<group>";
+		};
+		000000000000000000000027 = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000000E /* GuestDisplayView.swift */,
+				000000000000000000000010 /* TouchTranslator.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		000000000000000000000028 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000012 /* VMConfiguration.swift */,
+				000000000000000000000014 /* QEMUArgumentsBuilder.swift */,
+				000000000000000000000016 /* VMBackend.swift */,
+				00000000000000000000003A /* QEMUBackend.swift */,
+				00000000000000000000003C /* QEMUBridge.c */,
+				00000000000000000000003E /* QEMUBridge.h */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		000000000000000000000029 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000018 /* VMController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002A = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000001A /* GuestCatalog.swift */,
+				00000000000000000000001C /* DownloadManager.swift */,
+				00000000000000000000001E /* ZipExtractor.swift */,
+				000000000000000000000020 /* GuestSetupManager.swift */,
+				000000000000000000000022 /* SetupView.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		00000000000000000000006A = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000062 /* DNNativeLinker.c */,
+				000000000000000000000064 /* DNNativeLinker.h */,
+				000000000000000000000065 /* DNNativeShims.c */,
+				000000000000000000000067 /* DNNativeShims.h */,
+				000000000000000000000068 /* DNNativeRuntimeTest.swift */,
+				00000000000000000000006B /* DNGpuVulkan.c */,
+				00000000000000000000006D /* DNGpuVulkan.h */,
+				00000000000000000000006E /* DNGpuVulkanBackend.h */,
+				00000000000000000000006F /* DNGpuVulkanSoftwareBackend.c */,
+				000000000000000000000071 /* DNGpuVulkanMetalBackend.swift */,
+				000000000000000000000073 /* DNNativePatch.c */,
+				000000000000000000000075 /* DNNativePatch.h */,
+				000000000000000000000076 /* DNNativeBionic.c */,
+				000000000000000000000078 /* DNNativeBionic.h */,
+				000000000000000000000079 /* DNNativeAndroid.c */,
+				00000000000000000000007B /* DNNativeAndroid.h */,
+			);
+			path = NativeRuntime;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002B = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000001 /* DroidNativeApp.swift */,
+				000000000000000000000003 /* ContentView.swift */,
+				000000000000000000000005 /* DroidNative-Bridging-Header.h */,
+				000000000000000000000006 /* DroidNative.entitlements */,
+				000000000000000000000039 /* DroidNative-Paid.entitlements */,
+				000000000000000000000025 /* Capabilities */,
+				000000000000000000000026 /* JIT */,
+				000000000000000000000027 /* Display */,
+				000000000000000000000028 /* VM */,
+				000000000000000000000029 /* ViewModels */,
+				00000000000000000000002A /* Setup */,
+				00000000000000000000006A /* NativeRuntime */,
+				000000000000000000000060 /* Assets.xcassets */,
+			);
+			path = DroidNative;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002C = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000024 /* DroidNative.app */,
+				000000000000000000000050 /* DroidNativeJITHelper.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00000000000000000000002D = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000002B /* DroidNative */,
+				000000000000000000000052 /* DroidNativeJITHelper */,
+				00000000000000000000005D /* Vendor */,
+				00000000000000000000002C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00000000000000000000002E = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000049 /* ExtensionFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000002F = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000061 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000030 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000002 /* DroidNativeApp.swift in Sources */,
+				000000000000000000000004 /* ContentView.swift in Sources */,
+				000000000000000000000008 /* CapabilityProbe.swift in Sources */,
+				00000000000000000000000A /* JITCoordinator.swift in Sources */,
+				000000000000000000000041 /* DNBuiltInJITMessages.swift in Sources */,
+				000000000000000000000043 /* DNBuiltInJITHost.swift in Sources */,
+				000000000000000000000045 /* DNPairingFileStore.swift in Sources */,
+				000000000000000000000047 /* DNLocalDevVPNProbe.swift in Sources */,
+				00000000000000000000000C /* JIT26Bridge.m in Sources */,
+				00000000000000000000000F /* GuestDisplayView.swift in Sources */,
+				000000000000000000000011 /* TouchTranslator.swift in Sources */,
+				000000000000000000000013 /* VMConfiguration.swift in Sources */,
+				000000000000000000000015 /* QEMUArgumentsBuilder.swift in Sources */,
+				000000000000000000000017 /* VMBackend.swift in Sources */,
+				00000000000000000000003B /* QEMUBackend.swift in Sources */,
+				00000000000000000000003D /* QEMUBridge.c in Sources */,
+				000000000000000000000063 /* DNNativeLinker.c in Sources */,
+				000000000000000000000066 /* DNNativeShims.c in Sources */,
+				000000000000000000000069 /* DNNativeRuntimeTest.swift in Sources */,
+				00000000000000000000006C /* DNGpuVulkan.c in Sources */,
+				000000000000000000000070 /* DNGpuVulkanSoftwareBackend.c in Sources */,
+				000000000000000000000072 /* DNGpuVulkanMetalBackend.swift in Sources */,
+				000000000000000000000074 /* DNNativePatch.c in Sources */,
+				000000000000000000000077 /* DNNativeBionic.c in Sources */,
+				00000000000000000000007A /* DNNativeAndroid.c in Sources */,
+				000000000000000000000019 /* VMController.swift in Sources */,
+				00000000000000000000001B /* GuestCatalog.swift in Sources */,
+				00000000000000000000001D /* DownloadManager.swift in Sources */,
+				00000000000000000000001F /* ZipExtractor.swift in Sources */,
+				000000000000000000000021 /* GuestSetupManager.swift in Sources */,
+				000000000000000000000023 /* SetupView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000003F = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed QEMU frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"/bin/sh\" \"${SRCROOT}/../scripts/embed-qemu-assets.sh\"\n";
+		};
+		000000000000000000000031 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		000000000000000000000032 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000033 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DroidNative/DroidNative-Paid.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CADisableMinimumFrameDurationOnPhone = YES;
+				INFOPLIST_KEY_LSApplicationQueriesSchemes = stikdebug;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "iDroid foloseste reteaua locala pentru acces la masina virtuala (ex. adb de pe Mac).";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = iDroid;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.4.13;
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"-framework",
+					IOSurface,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ro.droidnative.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DroidNative/DroidNative-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		000000000000000000000034 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "DroidNative/DroidNative-Paid.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CADisableMinimumFrameDurationOnPhone = YES;
+				INFOPLIST_KEY_LSApplicationQueriesSchemes = stikdebug;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "iDroid foloseste reteaua locala pentru acces la masina virtuala (ex. adb de pe Mac).";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_KEY_CFBundleDisplayName = iDroid;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.4.13;
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"-framework",
+					IOSurface,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ro.droidnative.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DroidNative/DroidNative-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		000000000000000000000035 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000031 /* Debug */,
+				000000000000000000000032 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000036 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000033 /* Debug */,
+				000000000000000000000034 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000037 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000036 /* Build configuration list for PBXNativeTarget "DroidNative" */;
+			buildPhases = (
+				000000000000000000000030 /* Sources */,
+				00000000000000000000002E /* Frameworks */,
+				00000000000000000000002F /* Resources */,
+				00000000000000000000003F /* Embed QEMU frameworks */,
+				000000000000000000000055 /* Embed App Extensions */,
+				000000000000000000000056 /* Embed StikJIT framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00000000000000000000005C /* PBXTargetDependency */,
+			);
+			name = DroidNative;
+			productName = DroidNative;
+			productReference = 000000000000000000000024 /* DroidNative.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000040 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNBuiltInJITMessages.swift; sourceTree = "<group>"; };
+		000000000000000000000041 = {isa = PBXBuildFile; fileRef = 000000000000000000000040 /* DNBuiltInJITMessages.swift */; };
+		000000000000000000000042 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNBuiltInJITHost.swift; sourceTree = "<group>"; };
+		000000000000000000000043 = {isa = PBXBuildFile; fileRef = 000000000000000000000042 /* DNBuiltInJITHost.swift */; };
+		000000000000000000000044 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNPairingFileStore.swift; sourceTree = "<group>"; };
+		000000000000000000000045 = {isa = PBXBuildFile; fileRef = 000000000000000000000044 /* DNPairingFileStore.swift */; };
+		000000000000000000000046 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNLocalDevVPNProbe.swift; sourceTree = "<group>"; };
+		000000000000000000000047 = {isa = PBXBuildFile; fileRef = 000000000000000000000046 /* DNLocalDevVPNProbe.swift */; };
+		000000000000000000000048 = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExtensionFoundation.framework; path = System/Library/Frameworks/ExtensionFoundation.framework; sourceTree = SDKROOT; };
+		000000000000000000000049 = {isa = PBXBuildFile; fileRef = 000000000000000000000048 /* ExtensionFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		00000000000000000000004A = {isa = PBXBuildFile; fileRef = 000000000000000000000048 /* ExtensionFoundation.framework */; };
+		00000000000000000000004B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroidNativeJITHelper.swift; sourceTree = "<group>"; };
+		00000000000000000000004C = {isa = PBXBuildFile; fileRef = 00000000000000000000004B /* DroidNativeJITHelper.swift */; };
+		00000000000000000000004D = {isa = PBXBuildFile; fileRef = 000000000000000000000040 /* DNBuiltInJITMessages.swift */; };
+		00000000000000000000004E = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00000000000000000000004F = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DroidNativeJITHelper.entitlements; sourceTree = "<group>"; };
+		000000000000000000000050 = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DroidNativeJITHelper.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000051 = {isa = PBXBuildFile; fileRef = 000000000000000000000050 /* DroidNativeJITHelper.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		000000000000000000000052 = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000004B /* DroidNativeJITHelper.swift */,
+				00000000000000000000004E /* Info.plist */,
+				00000000000000000000004F /* DroidNativeJITHelper.entitlements */,
+			);
+			path = DroidNativeJITHelper;
+			sourceTree = "<group>";
+		};
+		000000000000000000000053 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000004C /* DroidNativeJITHelper.swift in Sources */,
+				00000000000000000000004D /* DNBuiltInJITMessages.swift in Helper Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000054 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000004A /* ExtensionFoundation.framework in Helper Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000055 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				000000000000000000000051 /* DroidNativeJITHelper.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000056 = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Embed StikJIT framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"/bin/sh\" \"${SRCROOT}/../scripts/embed-stikjit-framework.sh\"\n";
+		};
+		000000000000000000000057 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DroidNativeJITHelper/DroidNativeJITHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Vendor/StikJIT.xcframework/ios-arm64";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DroidNativeJITHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.4.13;
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"-framework",
+					StikJIT,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ro.droidnative.app.JITHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000058 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = DroidNativeJITHelper/DroidNativeJITHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/Vendor/StikJIT.xcframework/ios-arm64";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DroidNativeJITHelper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../../Frameworks",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.4.13;
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"-framework",
+					StikJIT,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ro.droidnative.app.JITHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		000000000000000000000059 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000057 /* Debug */,
+				000000000000000000000058 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000005A = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000059 /* Build configuration list for PBXNativeTarget "DroidNativeJITHelper" */;
+			buildPhases = (
+				000000000000000000000053 /* Sources */,
+				000000000000000000000054 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroidNativeJITHelper;
+			productName = DroidNativeJITHelper;
+			productReference = 000000000000000000000050 /* DroidNativeJITHelper.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		00000000000000000000005B = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000038 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00000000000000000000005A;
+			remoteInfo = DroidNativeJITHelper;
+		};
+		00000000000000000000005C = {
+			isa = PBXTargetDependency;
+			target = 00000000000000000000005A /* DroidNativeJITHelper */;
+			targetProxy = 00000000000000000000005B /* PBXContainerItemProxy */;
+		};
+		00000000000000000000005D = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000005E /* StikJIT.xcframework */,
+				00000000000000000000005F /* StikJIT-LICENSE.txt */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		00000000000000000000005E = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = StikJIT.xcframework; sourceTree = "<group>"; };
+		00000000000000000000005F = {isa = PBXFileReference; lastKnownFileType = text; path = "StikJIT-LICENSE.txt"; sourceTree = "<group>"; };
+		000000000000000000000038 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					000000000000000000000037 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					00000000000000000000005A = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000035 /* Build configuration list for PBXProject "DroidNative" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00000000000000000000002D;
+			productRefGroup = 00000000000000000000002C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000037 /* DroidNative */,
+				00000000000000000000005A /* DroidNativeJITHelper */,
+			);
+		};
+	};
+	rootObject = 000000000000000000000038 /* Project object */;
+}

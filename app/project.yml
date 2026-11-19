@@ -1,0 +1,83 @@
+# Generare proiect Xcode:  brew install xcodegen && xcodegen generate
+# Proiectul livrat (DroidNative.xcodeproj) e echivalent; deschide-l direct.
+name: DroidNative
+options:
+  bundleIdPrefix: ro.droidnative
+  deploymentTarget:
+    iOS: "26.0"          # tinta: generatia iOS 26/27 (protocolul JIT TXM)
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    DEVELOPMENT_TEAM: ""   # <-- Your Team (a Personal Team is enough)
+targets:
+  DroidNative:
+    type: application
+    platform: iOS
+    sources:
+      - DroidNative
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ro.droidnative.app
+        CODE_SIGN_ENTITLEMENTS: DroidNative/DroidNative-Paid.entitlements   # increased-memory-limit + EVA (the current account can sign them; for a Personal Team revert to DroidNative.entitlements)
+        SWIFT_OBJC_BRIDGING_HEADER: DroidNative/DroidNative-Bridging-Header.h
+        INFOPLIST_KEY_LSApplicationQueriesSchemes: "stikdebug"
+        # Pentru acces din LAN la porturile inaintate din guest (ex. adb 5555):
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "iDroid uses the local network so you can connect to the Android virtual machine (for example adb from your Mac)."
+        INFOPLIST_KEY_CFBundleDisplayName: "iDroid"
+        MARKETING_VERSION: "0.4.13"   # seria de build afisata in Configurare + exporturi; creste .3, .4...
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: "AppIcon"
+        INFOPLIST_KEY_UILaunchStoryboardName: ""
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        GENERATE_INFOPLIST_FILE: YES
+        # Randare ProMotion pana la 120 Hz pentru view-ul guest-ului:
+        INFOPLIST_KEY_CADisableMinimumFrameDurationOnPhone: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/Frameworks"
+    dependencies:
+      # QEMU loads dynamically (dlopen), so it is not a link dependency.
+      - target: DroidNativeJITHelper
+      - sdk: ExtensionFoundation.framework
+        weak: true
+      - sdk: IOSurface.framework   # public BGRA pool for the guarded EAGL presenter
+    postBuildScripts:
+      - name: "Embed QEMU frameworks"
+        path: ../scripts/embed-qemu-assets.sh
+      - name: "Embed StikJIT framework"
+        path: ../scripts/embed-stikjit-framework.sh
+
+  # Al doilea proces pentru Built-in StikJIT (docs/08): extensia vorbeste cu
+  # debugserver-ul, aplicatia e tinta. Linkeaza StikJIT oficial (app/Vendor);
+  # framework-ul e inglobat in aplicatia gazda de scriptul de mai sus si gasit
+  # prin @executable_path/../../Frameworks.
+  DroidNativeJITHelper:
+    type: app-extension
+    platform: iOS
+    sources:
+      - DroidNativeJITHelper
+      - DroidNative/JIT/DNBuiltInJITMessages.swift
+    info:
+      path: DroidNativeJITHelper/Info.plist
+    entitlements:
+      path: DroidNativeJITHelper/DroidNativeJITHelper.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ro.droidnative.app.JITHelper
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/../../Frameworks"
+          - "@executable_path/Frameworks"
+        "FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]": "$(SRCROOT)/Vendor/StikJIT.xcframework/ios-arm64"
+        "OTHER_LDFLAGS[sdk=iphoneos*]":
+          - "$(inherited)"
+          - "-framework"
+          - StikJIT
+    dependencies:
+      - sdk: ExtensionFoundation.framework

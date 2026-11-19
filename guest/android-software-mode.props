@@ -1,0 +1,29 @@
+# Fortarea Android pe randare software in Faza 1 (lectie S5LBox: CA_ENABLE_MBX2D=0,
+# docs/05 L4). Ideea: stabilitate intai, accelerare dupa. Fara astea, Android
+# insista pe hwcomposer/GPU si petrecem saptamani depanand un GPU virtual
+# pe care oricum il rescriem in Faza 2.
+#
+# Cum se aplica (pe build userdebug/Lineage, prin adb + remount, sau in
+# build.prop la construirea imaginii):
+#   adb root && adb remount
+#   adb push android-software-mode.props /vendor/build.prop.addon
+# sau punctual la rulare: adb shell setprop <cheie> <valoare>
+
+# EGL pe SwiftShader (Vulkan/GL software) — sau "llvmpipe" via Mesa, dupa imagine:
+ro.hardware.egl=swiftshader
+ro.hardware.vulkan=swiftshader
+
+# HWUI pe OpenGL (peste SwiftShader), nu pe calea hardware nativa:
+debug.hwui.renderer=skiagl
+
+# Fara boot animation (economie de timp la fiecare boot rece de debug):
+debug.sf.nobootanimation=1
+
+# SurfaceFlinger: compunere fara a presupune un HWC cu GPU real.
+# Pe imaginile virtio, HWC-ul DRM preia scanout-ul; randarea ramane software.
+persist.demo.hdmirotationlock=true
+
+# NOTA: valorile concrete (swiftshader vs llvmpipe) se confirma in Faza 1 pe
+# imaginea Lineage aleasa — vezi `adb shell dumpsys SurfaceFlinger` si
+# `adb shell getprop | grep -i egl`. Accelerarea hardware revine in Faza 2
+# (virgl -> ANGLE -> Metal), moment in care acest fisier se dezactiveaza.

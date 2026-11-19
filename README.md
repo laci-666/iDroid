@@ -18,11 +18,11 @@ The default profile uses software guest rendering, 2 vCPUs, `icount` on, and sup
 
 GPU trials use separate APFS copy-on-write disk clones and do not support snapshots. The parallel CPU/GPU trial requires an existing `GPUTrial` clone. Its 2-vCPU profile has been tested on-device; 3- and 4-vCPU profiles are experimental.
 
-The optional IOSurface presenter is limited to the 2-vCPU parallel trial at resolutions up to 720×1280. It falls back to the PBO path; turn it off to force PBO. This 0.4.13 path is not verified on iPhone. The usual display settings are 720×1280 and a 75 Hz EDID request; neither setting establishes Android FPS. **60/120 FPS have not been demonstrated.**
+The optional IOSurface presenter is limited to the 2-vCPU parallel trial at resolutions up to 720×1280. It falls back to the PBO path; turn it off to force PBO. This 0.4.13 path is not verified on iPhone. The usual display settings are 720×1280 and a 75 Hz EDID request; neither setting establishes Android FPS. **60/120 FPS have not been demonstrated.** See [`docs/12-PERFORMANTA-GRAFICA.md`](docs/12-PERFORMANTA-GRAFICA.md) and [`docs/15-STATUS-ACTUAL.md`](docs/15-STATUS-ACTUAL.md) for test scope and results.
 
 ## Build on macOS
 
-Building the iOS app and QEMU engine requires macOS, Xcode, Homebrew, network access, and several gigabytes of free space. The first QEMU build can take 30–90 minutes. Install the prerequisites listed then run from the repository root:
+Building the iOS app and QEMU engine requires macOS, Xcode, Homebrew, network access, and several gigabytes of free space. The first QEMU build can take 30–90 minutes. Install the prerequisites listed in [`docs/07-FAZA1-QEMU.md`](docs/07-FAZA1-QEMU.md), then run from the repository root:
 
 ```sh
 DN_ENGINE=tcg ./scripts/build-qemu-ios.sh

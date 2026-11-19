@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Entitlement-uri IMPLICITE ale proiectului (decizie 2026-10-20): contul
+     curent le poate semna. Contin Increased Memory Limit + Extended Virtual
+     Addressing — guest-ul primeste pana la 4 GB RAM prin formula din
+     CapabilityProbe. Pentru un Personal Team care le refuza la provisioning,
+     revino la DroidNative/DroidNative.entitlements (gol) in Build Settings
+     -> Code Signing Entitlements; aplicatia merge identic, cu mai putin RAM. -->
+<plist version="1.0">
+<dict>
+	<!-- Ridica limita jetsam per-proces => mai mult RAM pentru guest. -->
+	<key>com.apple.developer.kernel.increased-memory-limit</key>
+	<true/>
+	<!-- Spatiu de adrese virtuale extins (arena JIT + RAM guest mmap-uit). -->
+	<key>com.apple.developer.kernel.extended-virtual-addressing</key>
+	<true/>
+</dict>
+</plist>

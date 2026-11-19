@@ -1,0 +1,30 @@
+# Fragment de config pentru kernelul guest (GKI) — masina QEMU `virt`
+# Se aplica peste gki_defconfig: scripts/kconfig/merge_config.sh gki_defconfig kernel-config.fragment
+
+# --- Transport virtio (PCI pe `virt` modern) ---
+CONFIG_PCI=y
+CONFIG_PCI_HOST_GENERIC=y
+CONFIG_VIRTIO=y
+CONFIG_VIRTIO_PCI=y
+CONFIG_VIRTIO_PCI_LEGACY=y
+
+# --- Dispozitive folosite de DroidNative (vezi QEMUArgumentsBuilder) ---
+CONFIG_VIRTIO_BLK=y
+CONFIG_VIRTIO_NET=y
+CONFIG_VIRTIO_CONSOLE=y
+CONFIG_VIRTIO_INPUT=y
+CONFIG_VIRTIO_BALLOON=y
+CONFIG_HW_RANDOM_VIRTIO=y
+CONFIG_DRM_VIRTIO_GPU=y
+CONFIG_SND_VIRTIO=y
+
+# --- Android esential (de obicei deja in GKI; explicit ca sa nu dispara) ---
+CONFIG_ANDROID_BINDER_IPC=y
+CONFIG_ANDROID_BINDERFS=y
+CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
+CONFIG_ASHMEM=y
+# Pagina de 4 KB e obligatorie pentru compatibilitate AOSP/zona DMA guest:
+CONFIG_ARM64_4K_PAGES=y
+
+# --- ACPI + device tree ---
+CONFIG_ACPI=y

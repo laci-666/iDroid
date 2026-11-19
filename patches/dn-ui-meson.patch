@@ -1,0 +1,11 @@
+--- a/ui/meson.build
++++ b/ui/meson.build
+@@ -4,6 +4,8 @@
+ 
+ system_ss.add(png)
+ system_ss.add(files(
++  'dn-display.c',
++  'dn-snapshot.c',
+   'clipboard.c',
+   'console.c',
+   'cursor.c',
